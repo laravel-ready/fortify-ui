@@ -11,4 +11,6 @@ return [
     'link_forgot_your_password' => 'Şifrenizi mi unuttunuz?',
     'splitter_or_login_with' => 'Veya Email / Kullanıcı Adı ile Giriş Yapın',
     'splitter_or_register_with' => 'Veya Email / Kullanıcı Adı ile Kayıt Olun',
+    'placeholder_name' => 'İsim / Soyisim',
+    'placeholder_username' => 'Kullanıcı Adı',
 ];

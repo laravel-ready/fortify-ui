@@ -1,30 +1,20 @@
 @extends('fortify-ui::starter.layout.main')
 
-@php
-    $defaultUser = config('app.debug')
-        ? app()
-            ->make(\App\Models\User::class)
-            ::where('email', 'super_admin@example.com')
-            ->where('email', 'admin@example.com')
-            ->first()
-        : false;
-@endphp
-
 @section('content')
     <!-- Title -->
     <div class="title">
         <!-- Form Title -->
         <h1 class="form-title">
-            {{ __('fortify-ui::auth.login') }}
+            {{ __('fortify-ui::auth.register') }}
         </h1>
     </div>
 
     <!-- Auth Form -->
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        {{-- Social Login --}}
-        @include('fortify-ui::starter.components.social-login')
+        {{-- Social Register --}}
+        @include('fortify-ui::starter.components.social-register')
 
         <!-- Email Input Container -->
         <div class="input-container">
@@ -34,8 +24,29 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="email" name="email" type="email" placeholder="{{ __('fortify-ui::auth.placeholder_email_address') }}"
-                value="{{ $defaultUser->email ?? null }}" />
+            <input class="input" autocomplete="off" id="email" name="email" type="email" placeholder="{{ __('fortify-ui::auth.placeholder_email_address') }}" />
+        </div>
+
+        <!-- Name / Surname Input Container -->
+        <div class="input-container">
+            <!-- Icon Label -->
+            <label for="name">
+                @include('fortify-ui::starter.components.svg-icons.name')
+            </label>
+
+            <!-- Input -->
+            <input class="input" autocomplete="off" id="name" name="name" type="text" placeholder="{{ __('fortify-ui::auth.placeholder_name') }}"/>
+        </div>
+
+        <!-- Username Input Container -->
+        <div class="input-container">
+            <!-- Icon Label -->
+            <label for="username">
+                @include('fortify-ui::starter.components.svg-icons.username')
+            </label>
+
+            <!-- Input -->
+            <input class="input" autocomplete="off" id="username" name="username" type="text" placeholder="{{ __('fortify-ui::auth.placeholder_username') }}" autocomplete="off"/>
         </div>
 
         <!-- Password Input Container -->
@@ -46,8 +57,7 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="password" name="password" type="password" placeholder="{{ __('fortify-ui::auth.placeholder_password') }}"
-                value="{{ $defaultUser->email ?? null }}" />
+            <input class="input" autocomplete="off" id="password" name="password" type="password" placeholder="{{ __('fortify-ui::auth.placeholder_password') }}" autocomplete="off"/>
 
             <!-- Eye Toggle -->
             <button type="button" id="eye-toggle" class="eye-toggle">
@@ -65,11 +75,7 @@
 
         <!-- Check Input Container -->
         <div class="check-input-container">
-            <input id="checked-checkbox" type="checkbox" value="">
-
-            <label for="checked-checkbox">
-                {{ __('fortify-ui::auth.remember_me') }}
-            </label>
+            {{-- TODO: add terms and conditions --}}
         </div>
 
         {{-- Errors --}}
