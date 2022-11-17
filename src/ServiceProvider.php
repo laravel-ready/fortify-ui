@@ -58,6 +58,11 @@ final class ServiceProvider extends BaseServiceProvider
             __DIR__ . '/../resources' => resource_path('vendor/fortify-ui'),
         ], 'fortify-ui-assets');
 
+        // views
+        $this->publishes([
+            __DIR__ . '/../resources/views' => resource_path('views/vendor/fortify-ui'),
+        ], 'fortify-ui-views');
+
         // language files
         $this->publishes([
             __DIR__ . '/../lang' => resource_path('lang/vendor/fortify-ui'),
