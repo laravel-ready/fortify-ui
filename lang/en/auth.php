@@ -9,6 +9,7 @@ return [
     'remember_me' => 'Remember Me',
     'placeholder_email_address' => 'Email Address',
     'placeholder_password' => 'Password',
+    'placeholder_password_confirmation' => 'Password Confirmation',
     'link_forgot_your_password' => 'Forgot Your Password?',
     'link_do_you_have_an_account' => 'Do you have an account?',
     'splitter_or_login_with' => 'Or Login With Email / Username',

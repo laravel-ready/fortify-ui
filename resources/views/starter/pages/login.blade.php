@@ -1,4 +1,4 @@
-@extends('fortify-ui::starter.layout.main')
+@extends('fortify-ui::starter.layout.guest')
 
 @php
     $defaultUser = config('app.debug')

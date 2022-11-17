@@ -1,4 +1,4 @@
-@extends('fortify-ui::starter.layout.main')
+@extends('fortify-ui::starter.layout.guest')
 
 @section('content')
     <!-- Title -->
@@ -66,27 +66,31 @@
             </button>
         </div>
 
+        <!-- Password Input Container -->
+        <div class="input-container">
+            <!-- Icon Label -->
+            <label for="password_confirmation">
+                @include('fortify-ui::starter.components.svg-icons.password')
+            </label>
+
+            <!-- Input -->
+            <input class="input" autocomplete="off" id="password_confirmation" name="password_confirmation" type="password" placeholder="{{ __('fortify-ui::auth.placeholder_password_confirmation') }}"
+                autocomplete="off" />
+
+            <!-- Eye Toggle -->
+            <button type="button" id="eye-toggle" class="eye-toggle">
+                @include('fortify-ui::starter.components.svg-icons.eye-open')
+                @include('fortify-ui::starter.components.svg-icons.eye-close')
+            </button>
+        </div>
+
         <!-- Check Input Container -->
         <div class="check-input-container">
             {{-- TODO: add terms and conditions --}}
         </div>
 
         {{-- Errors --}}
-        <div>
-            @if ($errors->any())
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>
-                            <span class="invalid-feedback" role="alert">
-                                <strong>
-                                    {{ $error }}
-                                </strong>
-                            </span>
-                        </li>
-                    @endforeach
-                </ul>
-            @endif
-        </div>
+        @include('fortify-ui::starter.components.generic-errors')
 
         <!-- Submit Button Container -->
         <div class="submit-button-container">
