@@ -102,11 +102,9 @@
                 </svg>
             </button>
 
-            @if (Route::has('password.request'))
-                <a class="btn btn-link" href="{{ route('password.request') }}">
-                    {{ __('fortify-ui::auth.link_forgot_your_password') }}
-                </a>
-            @endif
+            <a class="btn btn-link" href="{{ route('password.request') }}">
+                {{ __('fortify-ui::auth.link_forgot_your_password') }}
+            </a>
         </div>
     </form>
 @endsection
