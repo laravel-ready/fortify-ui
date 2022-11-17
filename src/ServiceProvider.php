@@ -18,7 +18,11 @@ final class ServiceProvider extends BaseServiceProvider
     {
         $this->bootPublishes();
 
-        $this->registerViewNamespaces();
+        // register view namespaces
+        $this->app['view']->addNamespace('fortify-ui', __DIR__ . '/../resources/views');
+
+        // register package language files
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'fortify-ui');
     }
 
     /**
@@ -53,13 +57,10 @@ final class ServiceProvider extends BaseServiceProvider
         $this->publishes([
             __DIR__ . '/../resources' => resource_path('vendor/fortify-ui'),
         ], 'fortify-ui-assets');
-    }
 
-    /**
-     * Register view namespaces
-     */
-    private function registerViewNamespaces(): void
-    {
-        $this->app['view']->addNamespace('fortify-ui', __DIR__ . '/../resources/views');
+        // language files
+        $this->publishes([
+            __DIR__ . '/../lang' => resource_path('lang/vendor/fortify-ui'),
+        ], 'fortify-ui-lang');
     }
 }

@@ -15,7 +15,7 @@
     <div class="title">
         <!-- Form Title -->
         <h1 class="form-title">
-            {{ __('Login') }}
+            {{ __('fortify-ui::auth.login') }}
         </h1>
     </div>
 
@@ -37,7 +37,8 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="email" name="email" type="email" placeholder="{{ __('Email Address') }}" value="{{ $defaultUser->email ?? null }}" />
+            <input class="input" autocomplete="off" id="email" name="email" type="email" placeholder="{{ __('fortify-ui::auth.placeholder_email_address') }}"
+                value="{{ $defaultUser->email ?? null }}" />
         </div>
 
         <!-- Input Container -->
@@ -51,7 +52,8 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="password" name="password" type="password" placeholder="{{ __('Password') }}" value="{{ $defaultUser->email ?? null }}" />
+            <input class="input" autocomplete="off" id="password" name="password" type="password" placeholder="{{ __('fortify-ui::auth.placeholder_password') }}"
+                value="{{ $defaultUser->email ?? null }}" />
 
             <!-- Eye Toggle -->
             <button type="button" id="eye-toggle" class="eye-toggle">
@@ -72,7 +74,7 @@
             <input id="checked-checkbox" type="checkbox" value="">
 
             <label for="checked-checkbox">
-                Remember Me
+                {{ __('fortify-ui::auth.remember_me') }}
             </label>
         </div>
 
@@ -99,7 +101,7 @@
         <div class="submit-button-container">
             <button type="submit">
                 <span>
-                    {{ __('Login') }}
+                    {{ __('fortify-ui::auth.login') }}
                 </span>
 
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
@@ -110,7 +112,7 @@
 
             @if (Route::has('password.request'))
                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                    {{ __('Forgot Your Password?') }}
+                    {{ __('fortify-ui::auth.link_forgot_your_password') }}
                 </a>
             @endif
         </div>
