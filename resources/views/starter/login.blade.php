@@ -26,7 +26,7 @@
         {{-- Social Login --}}
         @include('fortify-ui::starter.components.social-login')
 
-        <!-- Input Container -->
+        <!-- Email Input Container -->
         <div class="input-container">
             <!-- Icon Label -->
             <label for="email">
@@ -41,7 +41,7 @@
                 value="{{ $defaultUser->email ?? null }}" />
         </div>
 
-        <!-- Input Container -->
+        <!-- Password Input Container -->
         <div class="input-container">
             <!-- Icon Label -->
             <label for="password">
