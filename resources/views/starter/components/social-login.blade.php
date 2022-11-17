@@ -4,7 +4,7 @@
         <!-- Splitter Background -->
         <div class="splitter-background">
             <span>
-                {{ __('fortify-ui::auth.splitter_or') }}
+                {{ __('fortify-ui::auth.splitter_or_login_with') }}
             </span>
         </div>
     </div>
