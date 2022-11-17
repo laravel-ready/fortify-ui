@@ -2,9 +2,9 @@
 
 return [
     /**
-     * Set the default layout for the views
+     * Set the default favicon url
      * 
-     * Default: 'starter'
+     * Default: 'https://fav.farm/👻'
      */
-    'default_ui' => 'starter',
+    'favicon' => 'https://fav.farm/👻',
 ];
