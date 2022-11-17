@@ -81,19 +81,17 @@
         {{-- Errors --}}
         <div>
             @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>
-                                        {{ $error }}
-                                    </strong>
-                                </span>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>
+                            <span class="invalid-feedback" role="alert">
+                                <strong>
+                                    {{ $error }}
+                                </strong>
+                            </span>
+                        </li>
+                    @endforeach
+                </ul>
             @endif
         </div>
 
