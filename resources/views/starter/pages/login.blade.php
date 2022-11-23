@@ -58,9 +58,9 @@
 
         <!-- Check Input Container -->
         <div class="check-input-container">
-            <input id="checked-checkbox" type="checkbox" value="">
+            <input id="remember" name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
 
-            <label for="checked-checkbox">
+            <label for="remember">
                 {{ __('fortify-ui::auth.remember_me') }}
             </label>
         </div>
