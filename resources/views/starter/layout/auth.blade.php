@@ -8,7 +8,7 @@
 <body>
     <div id="app">
         {{-- Navbar --}}
-        @include('fortify-ui::starter.components.navbar')
+        @include('fortify-ui::starter.layout.partials.navbar')
 
         <main>
             <!-- Auth Card Container -->
