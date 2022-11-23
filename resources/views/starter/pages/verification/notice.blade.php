@@ -64,10 +64,6 @@
                         <button class="verify-email-button">
                             Verify Email Again
                         </button>
-
-                        <button class="logout-button" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            {{ __('fortify-ui::auth.logout') }}
-                        </button>
                     </div>
                 </div>
             </div>
