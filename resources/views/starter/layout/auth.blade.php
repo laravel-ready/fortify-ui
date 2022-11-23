@@ -13,21 +13,7 @@
         <main>
             <!-- Auth Card Container -->
             <div class="auth-card-container">
-                <!-- Auth Card -->
-                <div class="auth-card">
-                    <!-- Backward Card -->
-                    <div class="backward-card">
-
-                    </div>
-
-                    <!-- Front Card -->
-                    <div class="front-card">
-                        <!-- Card Container -->
-                        <div class="card-container">
-                            @yield('content')
-                        </div>
-                    </div>
-                </div>
+                @yield('content')
             </div>
         </main>
     </div>

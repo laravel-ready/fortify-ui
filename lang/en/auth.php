@@ -16,4 +16,5 @@ return [
     'splitter_or_register_with' => 'Or Register With Email / Username',
     'placeholder_name' => 'Name / Surname',
     'placeholder_username' => 'Username',
+    'welcome' => 'Welcome',
 ];

@@ -16,4 +16,5 @@ return [
     'splitter_or_register_with' => 'Veya Email / Kullanıcı Adı ile Kayıt Olun',
     'placeholder_name' => 'İsim / Soyisim',
     'placeholder_username' => 'Kullanıcı Adı',
+    'welcome' => 'Hoşgeldiniz',
 ];
