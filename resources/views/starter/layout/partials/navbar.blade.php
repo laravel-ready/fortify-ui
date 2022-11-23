@@ -47,7 +47,7 @@
                 @auth
                     <!-- Login -->
                     <li class="login">
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <a onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             {{ __('fortify-ui::auth.logout') }}
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
