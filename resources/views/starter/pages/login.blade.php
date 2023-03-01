@@ -34,7 +34,8 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="email" name="email" type="email" placeholder="{{ __('fortify-ui::auth.placeholder_email_address') }}"
+            <input class="input" autocomplete="off" id="email" name="email" type="email"
+                placeholder="{{ __('fortify-ui::auth.form.placeholder_email_address') }}"
                 value="{{ $defaultUser->email ?? null }}" />
         </div>
 
@@ -46,7 +47,8 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="password" name="password" type="password" placeholder="{{ __('fortify-ui::auth.placeholder_password') }}"
+            <input class="input" autocomplete="off" id="password" name="password" type="password"
+                placeholder="{{ __('fortify-ui::auth.form.placeholder_password') }}"
                 value="{{ $defaultUser->email ?? null }}" />
 
             <!-- Eye Toggle -->
@@ -61,7 +63,7 @@
             <input id="remember" name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
 
             <label for="remember">
-                {{ __('fortify-ui::auth.remember_me') }}
+                {{ __('fortify-ui::auth.form.remember_me') }}
             </label>
         </div>
 
@@ -93,7 +95,7 @@
             </button>
 
             <a class="btn btn-link" href="{{ route('password.request') }}">
-                {{ __('fortify-ui::auth.link_forgot_your_password') }}
+                {{ __('fortify-ui::auth.form.link_forgot_your_password') }}
             </a>
         </div>
     </form>
