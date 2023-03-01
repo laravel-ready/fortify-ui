@@ -1,4 +1,5 @@
 @extends('layouts.guest')
+@section('pageTitle', __('fortify-ui::auth.register'))
 
 @section('content')
     <!-- Title -->

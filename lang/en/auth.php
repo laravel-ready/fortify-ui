@@ -8,6 +8,7 @@ return [
     'logout' => 'Logout',
     'confirm_password' => 'Confirm Password',
     'confirm_password_button' => 'Confirm',
+    'email_verification' => 'Email Verification',
     'form' => [
         'remember_me' => 'Remember Me',
         'placeholder_email_address' => 'Email Address',

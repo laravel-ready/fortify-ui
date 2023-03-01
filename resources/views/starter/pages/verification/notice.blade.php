@@ -1,4 +1,5 @@
 @extends('layouts.auth')
+@section('pageTitle', __('fortify-ui::auth.email_verification'))
 
 @section('content')
     <!-- Verify Notice Card -->

@@ -1,4 +1,5 @@
 @extends('layouts.guest')
+@section('pageTitle', __('fortify-ui::auth.confirm_password'))
 
 @php
     $defaultUser = config('app.debug')

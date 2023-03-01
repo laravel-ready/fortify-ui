@@ -8,6 +8,7 @@ return [
     'logout' => 'Çıkış',
     'confirm_password' => 'Şifre Doğrulama',
     'confirm_password_button' => 'Doğrula',
+    'email_verification' => 'Email Doğrulama',
     'form' => [
         'remember_me' => 'Beni Hatırla',
         'placeholder_email_address' => 'Email Adresi',
