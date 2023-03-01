@@ -9,6 +9,8 @@ return [
     'confirm_password' => 'Confirmer le mot de passe',
     'confirm_password_button' => 'Confirmer',
     'email_verification' => 'Vérification de l\'adresse e-mail',
+    'splitter_or_login_with' => 'Ou connectez-vous avec votre e-mail / nom d\'utilisateur',
+    'splitter_or_register_with' => 'Ou inscrivez-vous avec votre e-mail / nom d\'utilisateur',
     'form' => [
         'remember_me' => 'Se souvenir de moi',
         'placeholder_email_address' => 'Adresse e-mail',
@@ -16,8 +18,6 @@ return [
         'placeholder_password_confirmation' => 'Confirmez le mot de passe',
         'link_forgot_your_password' => 'Mot de passe oublié ?',
         'link_do_you_have_an_account' => 'Vous avez un compte ?',
-        'splitter_or_login_with' => 'Ou connectez-vous avec votre e-mail / nom d\'utilisateur',
-        'splitter_or_register_with' => 'Ou inscrivez-vous avec votre e-mail / nom d\'utilisateur',
         'placeholder_name' => 'Nom / Prénom',
         'placeholder_username' => 'Nom d\'utilisateur',
     ],

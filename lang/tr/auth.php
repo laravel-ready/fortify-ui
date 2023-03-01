@@ -9,6 +9,8 @@ return [
     'confirm_password' => 'Şifre Doğrulama',
     'confirm_password_button' => 'Doğrula',
     'email_verification' => 'Email Doğrulama',
+    'splitter_or_login_with' => 'Veya Email / Kullanıcı Adı ile Giriş Yapın',
+    'splitter_or_register_with' => 'Veya Email / Kullanıcı Adı ile Kayıt Olun',
     'form' => [
         'remember_me' => 'Beni Hatırla',
         'placeholder_email_address' => 'Email Adresi',
@@ -16,8 +18,6 @@ return [
         'placeholder_password_confirmation' => 'Şifre Tekrarı',
         'link_forgot_your_password' => 'Şifrenizi mi unuttunuz?',
         'link_do_you_have_an_account' => 'Hesabınız var mı?',
-        'splitter_or_login_with' => 'Veya Email / Kullanıcı Adı ile Giriş Yapın',
-        'splitter_or_register_with' => 'Veya Email / Kullanıcı Adı ile Kayıt Olun',
         'placeholder_name' => 'İsim / Soyisim',
         'placeholder_username' => 'Kullanıcı Adı',
     ],
