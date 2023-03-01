@@ -2,18 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // common variables
-@import "./../../variables";
-
-body {
-    font-family: $font-family-sans-serif;
-    height: 100%;
-    width: 100%;
-
-    @apply bg-white backdrop-blur-md;
-}
-
-@import "./../../partials/base-tailwind.scss";
-
+@import "./variables";
 @import "./layout/main.scss";
 @import "./dark.scss";
+
 @import "./components/inputs.scss";
+@import "./components/verify-notice-card.scss";
