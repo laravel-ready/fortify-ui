@@ -11,7 +11,8 @@
                 <div class="info-container">
                     <!-- Info Illustration -->
                     <div class="info-illustration">
-                        <svg class="class-svg-6" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="561" height="493" viewBox="0 0 561 493" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg class="class-svg-6" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" width="561"
+                            height="493" viewBox="0 0 561 493" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <path
                                 d="M876.03027,689.45c-.98047,1.37-1.97021,2.73-2.95019,4.08A16.82838,16.82838,0,0,1,863.5,696.5h-527a16.90383,16.90383,0,0,1-9.21-2.72c-.91016-1.2-1.81006-2.41-2.72022-3.62006l.91016-.5L592.27,541.78a16.01919,16.01919,0,0,1,15.47021-.02L875.12988,688.95Z"
                                 transform="translate(-319.5 -203.5)" fill="#6c63ff"></path>
@@ -27,11 +28,16 @@
                             <path
                                 d="M876.06982,385.88,803.5,426.68,791,433.71,607.75,536.75a15.24213,15.24213,0,0,1-7.4502,1.93,14.91079,14.91079,0,0,1-4.9497-.83,12.05366,12.05366,0,0,1-1.3003-.5q-.61449-.27-1.1997-.6L421.5,440.46,409,433.44l-84.91992-47.72a1.011,1.011,0,0,1-.37988-1.37.99933.99933,0,0,1,1.35986-.38L409,431.14l12.5,7.02L593.83008,535a13.07441,13.07441,0,0,0,1.77978.83c.26026.1.53028.19.8003.27A13.26424,13.26424,0,0,0,606.77,535L791,431.42l12.5-7.03,71.58984-40.25a.99849.99849,0,1,1,.98,1.74Z"
                                 transform="translate(-319.5 -203.5)" fill="#3f3d56"></path>
-                            <path d="M483.5748,269.5h-28a8,8,0,0,1,0-16h28a8,8,0,0,1,0,16Z" transform="translate(-319.5 -203.5)" fill="#6c63ff"></path>
-                            <path d="M516.5748,296.5h-61a8,8,0,0,1,0-16h61a8,8,0,0,1,0,16Z" transform="translate(-319.5 -203.5)" fill="#e6e6e6"></path>
-                            <path d="M687,368.5H514a8,8,0,0,1,0-16H687a8,8,0,0,1,0,16Z" transform="translate(-319.5 -203.5)" fill="#6c63ff"></path>
-                            <path d="M703,399.5H497a8,8,0,0,1,0-16H703a8,8,0,0,1,0,16Z" transform="translate(-319.5 -203.5)" fill="#e6e6e6"></path>
-                            <path d="M703,429.5H497a8,8,0,0,1,0-16H703a8,8,0,0,1,0,16Z" transform="translate(-319.5 -203.5)" fill="#e6e6e6"></path>
+                            <path d="M483.5748,269.5h-28a8,8,0,0,1,0-16h28a8,8,0,0,1,0,16Z"
+                                transform="translate(-319.5 -203.5)" fill="#6c63ff"></path>
+                            <path d="M516.5748,296.5h-61a8,8,0,0,1,0-16h61a8,8,0,0,1,0,16Z"
+                                transform="translate(-319.5 -203.5)" fill="#e6e6e6"></path>
+                            <path d="M687,368.5H514a8,8,0,0,1,0-16H687a8,8,0,0,1,0,16Z" transform="translate(-319.5 -203.5)"
+                                fill="#6c63ff"></path>
+                            <path d="M703,399.5H497a8,8,0,0,1,0-16H703a8,8,0,0,1,0,16Z" transform="translate(-319.5 -203.5)"
+                                fill="#e6e6e6"></path>
+                            <path d="M703,429.5H497a8,8,0,0,1,0-16H703a8,8,0,0,1,0,16Z" transform="translate(-319.5 -203.5)"
+                                fill="#e6e6e6"></path>
                         </svg>
                     </div>
                 </div>
@@ -42,16 +48,20 @@
                     <div class="message-container">
                         <!-- Welcome Username -->
                         <h3 class="welcome-username">
-                            {{ __('fortify-ui::auth.welcome') }}, {{ auth()->user()->name }}
+                            {{ __('fortify-ui::auth.verification.notice.welcome') }}, {{ auth()->user()->name }}
                         </h3>
 
                         <!-- Description -->
                         <p class="description">
-                            There is one more step to complete your registration. Please check your email for a verification link. If you can't find it, please check your spam folder. If you still can't
-                            find it, please
-                            <a href="#">
-                                contact us.
-                            </a>
+                            {{ __('fortify-ui::auth.verification.notice.email_verification_sent') }}
+                            {!! __('fortify-ui::auth.verification.notice.if_you_did_not_receive_the_email', [
+                                'link' =>
+                                    '<a href="' .
+                                    route('verification.send') .
+                                    '">' .
+                                    __('fortify-ui::auth.verification.notice.if_you_did_not_receive_the_email_click_here') .
+                                    '</a>',
+                            ]) !!}
                         </p>
                     </div>
                 </div>
@@ -60,10 +70,13 @@
                 <div class="actions">
                     <!-- Action Container -->
                     <div class="action-container">
-                        <!-- Verify Email Button -->
-                        <button class="verify-email-button">
-                            Verify Email Again
-                        </button>
+                        <form method="POST" action="{{ route('verification.send') }}" class="text-center">
+                            @csrf
+                            <!-- Verify Email Button -->
+                            <button class="verify-email-button">
+                                {{ __('fortify-ui::auth.verification.notice.resend_verification_email') }}
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

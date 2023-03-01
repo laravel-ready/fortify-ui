@@ -16,5 +16,14 @@ return [
     'splitter_or_register_with' => 'Or Register With Email / Username',
     'placeholder_name' => 'Name / Surname',
     'placeholder_username' => 'Username',
-    'welcome' => 'Welcome',
+
+    'verification' => [
+        'notice' => [
+            'welcome' => 'Welcome',
+            'resend_verification_email' => 'Resend Verification Email',
+            'email_verification_sent' => 'There is one more step to complete your registration. Please check your email for a verification link. If you can\'t find it, please check your spam folder.',
+            'if_you_did_not_receive_the_email' => 'If you did not receive the email, please :link',
+            'if_you_did_not_receive_the_email_click_here' => 'contact us.',
+        ]
+    ],
 ];

@@ -16,5 +16,14 @@ return [
     'splitter_or_register_with' => 'Veya Email / Kullanıcı Adı ile Kayıt Olun',
     'placeholder_name' => 'İsim / Soyisim',
     'placeholder_username' => 'Kullanıcı Adı',
-    'welcome' => 'Hoşgeldiniz',
+
+    'verification' => [
+        'notice' => [
+            'welcome' => 'Hoşgeldiniz',
+            'resend_verification_email' => 'Doğrulama Emailini Tekrar Gönder',
+            'email_verification_sent' => 'Kayıt işleminizi tamamlamak için bir adım daha var. Lütfen e-postanızı kontrol edin ve doğrulama bağlantısına tıklayın. Eğer bulamazsanız spam klasörünüzü kontrol edin.',
+            'if_you_did_not_receive_the_email' => 'Eğer e-postayı almadıysanız, lütfen :link',
+            'if_you_did_not_receive_the_email_click_here' => 'bizimle iletişime geçin.',
+        ]
+    ],
 ];
