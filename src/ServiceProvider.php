@@ -5,8 +5,6 @@ namespace LaravelReady\FortifyUi;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-use LaravelReady\FortifyUi\Services\FortifyUiService;
-
 final class ServiceProvider extends BaseServiceProvider
 {
     /**
@@ -34,11 +32,6 @@ final class ServiceProvider extends BaseServiceProvider
     {
         // package config file
         $this->mergeConfigFrom(__DIR__ . '/../config/fortify-ui.php', 'fortify-ui');
-
-        // register package service
-        $this->app->singleton('fortify-ui', function () {
-            return new FortifyUiService();
-        });
     }
 
     /**
