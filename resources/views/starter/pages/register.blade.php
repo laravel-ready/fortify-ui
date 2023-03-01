@@ -24,7 +24,8 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="email" name="email" type="email" placeholder="{{ __('fortify-ui::auth.placeholder_email_address') }}" />
+            <input class="input" autocomplete="off" id="email" name="email" type="email"
+                placeholder="{{ __('fortify-ui::auth.placeholder_email_address') }}" />
         </div>
 
         <!-- Name / Surname Input Container -->
@@ -35,7 +36,8 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="name" name="name" type="text" placeholder="{{ __('fortify-ui::auth.placeholder_name') }}" />
+            <input class="input" autocomplete="off" id="name" name="name" type="text"
+                placeholder="{{ __('fortify-ui::auth.placeholder_name') }}" />
         </div>
 
         <!-- Username Input Container -->
@@ -46,7 +48,8 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="username" name="username" type="text" placeholder="{{ __('fortify-ui::auth.placeholder_username') }}" autocomplete="off" />
+            <input class="input" autocomplete="off" id="username" name="username" type="text"
+                placeholder="{{ __('fortify-ui::auth.placeholder_username') }}" autocomplete="off" />
         </div>
 
         <!-- Password Input Container -->
@@ -57,16 +60,17 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="password" name="password" type="password" placeholder="{{ __('fortify-ui::auth.placeholder_password') }}" autocomplete="off" />
+            <input class="input" autocomplete="off" id="password" name="password" type="password"
+                placeholder="{{ __('fortify-ui::auth.placeholder_password') }}" autocomplete="off" />
 
             <!-- Eye Toggle -->
-            <button type="button" id="eye-toggle" class="eye-toggle">
+            <button type="button" id="eye-toggle" class="eye-toggle" data-input-id="password">
                 @include('fortify-ui::starter.components.svg-icons.eye-open')
                 @include('fortify-ui::starter.components.svg-icons.eye-close')
             </button>
         </div>
 
-        <!-- Password Input Container -->
+        <!-- Password Confirmation Input Container -->
         <div class="input-container">
             <!-- Icon Label -->
             <label for="password_confirmation">
@@ -74,11 +78,11 @@
             </label>
 
             <!-- Input -->
-            <input class="input" autocomplete="off" id="password_confirmation" name="password_confirmation" type="password" placeholder="{{ __('fortify-ui::auth.placeholder_password_confirmation') }}"
-                autocomplete="off" />
+            <input class="input" autocomplete="off" id="password_confirmation" name="password_confirmation" type="password"
+                placeholder="{{ __('fortify-ui::auth.placeholder_password_confirmation') }}" autocomplete="off" />
 
             <!-- Eye Toggle -->
-            <button type="button" id="eye-toggle" class="eye-toggle">
+            <button type="button" id="eye-toggle" class="eye-toggle" data-input-id="password_confirmation">
                 @include('fortify-ui::starter.components.svg-icons.eye-open')
                 @include('fortify-ui::starter.components.svg-icons.eye-close')
             </button>
@@ -114,25 +118,27 @@
         window.addEventListener('load', function() {
             // #region Password Eye Toggler
 
-            const eyeToggleButton = document.getElementById('eye-toggle');
+            const eyeToggleButtons = document.querySelectorAll('#eye-toggle');
 
-            if (eyeToggleButton) {
-                const passwordInput = document.getElementById('password'),
-                    eyeOpen = document.getElementById('eye-open'),
-                    eyeClose = document.getElementById('eye-close');
+            if (eyeToggleButtons && eyeToggleButtons.length > 0) {
+                eyeToggleButtons.forEach(eyeToggleButton => {
+                    const dataInputId = eyeToggleButton.getAttribute('data-input-id');
 
-                eyeToggleButton.addEventListener('click', function() {
-                    console.log(passwordInput);
+                    if (dataInputId) {
+                        cosnt passwordInput = document.querySelector(`input[id="${dataInputId}"]`),
+                            eyeOpen = document.getElementById('eye-open'),
+                            eyeClose = document.getElementById('eye-close');
 
-                    if (passwordInput.type === 'password') {
-                        passwordInput.type = 'text';
-                        eyeOpen.style.display = 'block';
-                        eyeClose.style.display = 'none';
+                        eyeToggleButton.addEventListener('click', function() {
+                            passwordInput.type = passwordInput.type === 'password' ? 'text' :
+                                'password';
+                            eyeOpen.style.display = passwordInput.type === 'password' ? 'block' :
+                                'none';
+                            eyeClose.style.display = passwordInput.type === 'password' ? 'none' :
+                                'block';
+                        });
                     } else {
-                        passwordInput.type = 'password';
-                        eyeOpen.style.display = 'none';
-                        eyeClose.style.display = 'block';
-
+                        console.error('Eye Toggle Button must have a data-input-id attribute.');
                     }
                 });
             }
