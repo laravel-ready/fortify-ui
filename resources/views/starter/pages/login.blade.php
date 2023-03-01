@@ -52,7 +52,7 @@
                 value="{{ $defaultUser->email ?? null }}" required />
 
             <!-- Eye Toggle -->
-            <button type="button" id="eye-toggle" class="eye-toggle">
+            <button type="button" id="eye-toggle" class="eye-toggle" data-input-id="password">
                 @include('fortify-ui::starter.components.svg-icons.eye-open')
                 @include('fortify-ui::starter.components.svg-icons.eye-close')
             </button>

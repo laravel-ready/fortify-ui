@@ -10,9 +10,9 @@
                     const dataInputId = eyeToggleButton.getAttribute('data-input-id');
 
                     if (dataInputId) {
-                        cosnt passwordInput = document.querySelector(`input[id="${dataInputId}"]`),
-                            eyeOpen = document.getElementById('eye-open'),
-                            eyeClose = document.getElementById('eye-close');
+                        const passwordInput = document.querySelector(`input[id="${dataInputId}"]`),
+                            eyeOpen = eyeToggleButton.querySelector('#eye-open'),
+                            eyeClose = eyeToggleButton.querySelector('#eye-close');
 
                         eyeToggleButton.addEventListener('click', function() {
                             passwordInput.type = passwordInput.type === 'password' ? 'text' :
