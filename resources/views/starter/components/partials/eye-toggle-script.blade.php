@@ -3,25 +3,27 @@
         window.addEventListener('load', function() {
             // #region Password Eye Toggler
 
-            const eyeToggleButton = document.getElementById('eye-toggle');
+            const eyeToggleButtons = document.querySelectorAll('#eye-toggle');
 
-            if (eyeToggleButton) {
-                const passwordInput = document.getElementById('password'),
-                    eyeOpen = document.getElementById('eye-open'),
-                    eyeClose = document.getElementById('eye-close');
+            if (eyeToggleButtons && eyeToggleButtons.length > 0) {
+                eyeToggleButtons.forEach(eyeToggleButton => {
+                    const dataInputId = eyeToggleButton.getAttribute('data-input-id');
 
-                eyeToggleButton.addEventListener('click', function() {
-                    console.log(passwordInput);
+                    if (dataInputId) {
+                        cosnt passwordInput = document.querySelector(`input[id="${dataInputId}"]`),
+                            eyeOpen = document.getElementById('eye-open'),
+                            eyeClose = document.getElementById('eye-close');
 
-                    if (passwordInput.type === 'password') {
-                        passwordInput.type = 'text';
-                        eyeOpen.style.display = 'block';
-                        eyeClose.style.display = 'none';
+                        eyeToggleButton.addEventListener('click', function() {
+                            passwordInput.type = passwordInput.type === 'password' ? 'text' :
+                                'password';
+                            eyeOpen.style.display = passwordInput.type === 'password' ? 'block' :
+                                'none';
+                            eyeClose.style.display = passwordInput.type === 'password' ? 'none' :
+                                'block';
+                        });
                     } else {
-                        passwordInput.type = 'password';
-                        eyeOpen.style.display = 'none';
-                        eyeClose.style.display = 'block';
-
+                        console.error('Eye Toggle Button must have a data-input-id attribute.');
                     }
                 });
             }
