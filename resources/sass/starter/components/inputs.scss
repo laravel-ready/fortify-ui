@@ -62,7 +62,7 @@ span[role="alert"] {
   @apply flex flex-row relative pt-4;
 
   button {
-    @apply flex flex-row justify-center items-center space-x-1 bg-blue-500 text-base text-white rounded-[3px] px-4 py-1
+    @apply flex flex-row justify-center items-center space-x-1 bg-blue-500 text-base text-white rounded-[3px] px-4 py-2
             hover:bg-blue-600 transition-all duration-300;
 
     &:hover {
@@ -71,6 +71,10 @@ span[role="alert"] {
 
         height: 18px;
       }
+    }
+
+    &.full-width {
+      @apply w-full;
     }
 
     svg {

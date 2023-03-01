@@ -6,6 +6,8 @@ return [
     'register' => 'Kayıt Ol',
     'register_button' => 'Kayıt',
     'logout' => 'Çıkış',
+    'confirm_password' => 'Şifre Doğrulama',
+    'confirm_password_button' => 'Doğrula',
     'form' => [
         'remember_me' => 'Beni Hatırla',
         'placeholder_email_address' => 'Email Adresi',

@@ -6,6 +6,8 @@ return [
     'register' => 'Register',
     'register_button' => 'Register',
     'logout' => 'Logout',
+    'confirm_password' => 'Confirm Password',
+    'confirm_password_button' => 'Confirm',
     'form' => [
         'remember_me' => 'Remember Me',
         'placeholder_email_address' => 'Email Address',
