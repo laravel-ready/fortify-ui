@@ -36,7 +36,7 @@
             <!-- Input -->
             <input class="input" autocomplete="off" id="email" name="email" type="email"
                 placeholder="{{ __('fortify-ui::auth.form.placeholder_email_address') }}"
-                value="{{ $defaultUser->email ?? null }}" />
+                value="{{ $defaultUser->email ?? null }}" required />
         </div>
 
         <!-- Password Input Container -->
@@ -49,7 +49,7 @@
             <!-- Input -->
             <input class="input" autocomplete="off" id="password" name="password" type="password"
                 placeholder="{{ __('fortify-ui::auth.form.placeholder_password') }}"
-                value="{{ $defaultUser->email ?? null }}" />
+                value="{{ $defaultUser->email ?? null }}" required />
 
             <!-- Eye Toggle -->
             <button type="button" id="eye-toggle" class="eye-toggle">

@@ -25,7 +25,7 @@
 
             <!-- Input -->
             <input class="input" autocomplete="off" id="email" name="email" type="email"
-                placeholder="{{ __('fortify-ui::auth.form.placeholder_email_address') }}" />
+                placeholder="{{ __('fortify-ui::auth.form.placeholder_email_address') }}" required />
         </div>
 
         <!-- Name / Surname Input Container -->
@@ -37,7 +37,7 @@
 
             <!-- Input -->
             <input class="input" autocomplete="off" id="name" name="name" type="text"
-                placeholder="{{ __('fortify-ui::auth.form.placeholder_name') }}" />
+                placeholder="{{ __('fortify-ui::auth.form.placeholder_name') }}" required />
         </div>
 
         <!-- Username Input Container -->
@@ -49,7 +49,7 @@
 
             <!-- Input -->
             <input class="input" autocomplete="off" id="username" name="username" type="text"
-                placeholder="{{ __('fortify-ui::auth.form.placeholder_username') }}" autocomplete="off" />
+                placeholder="{{ __('fortify-ui::auth.form.placeholder_username') }}" autocomplete="off" required />
         </div>
 
         <!-- Password Input Container -->
@@ -61,7 +61,7 @@
 
             <!-- Input -->
             <input class="input" autocomplete="off" id="password" name="password" type="password"
-                placeholder="{{ __('fortify-ui::auth.form.placeholder_password') }}" autocomplete="off" />
+                placeholder="{{ __('fortify-ui::auth.form.placeholder_password') }}" autocomplete="off" required />
 
             <!-- Eye Toggle -->
             <button type="button" id="eye-toggle" class="eye-toggle" data-input-id="password">
@@ -79,7 +79,8 @@
 
             <!-- Input -->
             <input class="input" autocomplete="off" id="password_confirmation" name="password_confirmation" type="password"
-                placeholder="{{ __('fortify-ui::auth.form.placeholder_password_confirmation') }}" autocomplete="off" />
+                placeholder="{{ __('fortify-ui::auth.form.placeholder_password_confirmation') }}" autocomplete="off"
+                required />
 
             <!-- Eye Toggle -->
             <button type="button" id="eye-toggle" class="eye-toggle" data-input-id="password_confirmation">
