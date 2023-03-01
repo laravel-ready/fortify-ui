@@ -1,4 +1,4 @@
-@extends('fortify-ui::starter.layout.auth')
+@extends('layouts.auth')
 
 @section('content')
     <!-- Verify Notice Card -->
