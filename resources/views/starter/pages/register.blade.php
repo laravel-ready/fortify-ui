@@ -107,11 +107,11 @@
 
                 @include('fortify-ui::starter.components.svg-icons.arrow-right')
             </button>
-
-            <a class="btn btn-link" href="{{ route('login') }}">
-                {{ __('fortify-ui::auth.form.link_do_you_have_an_account') }}
-            </a>
         </div>
+
+        <a class="btn btn-link m-top-2" href="{{ route('login') }}">
+            {{ __('fortify-ui::auth.form.link_do_you_have_an_account') }}
+        </a>
     </form>
 @endsection
 
