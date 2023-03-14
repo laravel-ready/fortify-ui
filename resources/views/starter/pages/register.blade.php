@@ -92,7 +92,21 @@
 
         <!-- Check Input Container -->
         <div class="check-input-container">
-            {{-- TODO: add terms and conditions --}}
+            <!-- Check Input Container -->
+            <div class="check-input-container">
+                <input id="remember" name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
+
+                <label for="remember">
+                    {!! __('fortify-ui::auth.form.terms_of_service', [
+                        'link' =>
+                            '<a href="' .
+                            config('fotify-ui.terms_of_service.url') .
+                            '">' .
+                            __('fortify-ui::auth.form.terms_of_service_link_text') .
+                            '</a>',
+                    ]) !!}
+                </label>
+            </div>
         </div>
 
         {{-- Errors --}}

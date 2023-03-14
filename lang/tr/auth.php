@@ -20,6 +20,8 @@ return [
         'link_do_you_have_an_account' => 'Hesabınız var mı?',
         'placeholder_name' => 'İsim / Soyisim',
         'placeholder_username' => 'Kullanıcı Adı',
+        'terms_of_service' => 'Üye olarak :link kabul etmiş olursunuz.',
+        'terms_of_service_link_text' => 'Kullanım Şartlarını',
     ],
     'verification' => [
         'notice' => [

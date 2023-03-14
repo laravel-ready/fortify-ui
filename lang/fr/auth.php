@@ -20,6 +20,8 @@ return [
         'link_do_you_have_an_account' => 'Vous avez un compte ?',
         'placeholder_name' => 'Nom / Prénom',
         'placeholder_username' => 'Nom d\'utilisateur',
+        'terms_of_service' => 'En vous inscrivant, vous acceptez les :link.',
+        'terms_of_service_link_text' => 'Conditions d\'utilisation',
     ],
     'verification' => [
         'notice' => [

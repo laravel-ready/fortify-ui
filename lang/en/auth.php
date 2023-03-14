@@ -20,6 +20,8 @@ return [
         'link_do_you_have_an_account' => 'Do you have an account?',
         'placeholder_name' => 'Name / Surname',
         'placeholder_username' => 'Username',
+        'terms_of_service' => 'By registering, you agree to the :link.',
+        'terms_of_service_link_text' => 'Terms of Service',
     ],
     'verification' => [
         'notice' => [
