@@ -92,7 +92,21 @@
 
         <!-- Check Input Container -->
         <div class="check-input-container">
-            {{-- TODO: add terms and conditions --}}
+            <!-- Check Input Container -->
+            <div class="check-input-container">
+                <input id="remember" name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
+
+                <label for="remember">
+                    {!! __('fortify-ui::auth.form.terms_of_service', [
+                        'link' =>
+                            '<a href="' .
+                            config('fotify-ui.terms_of_service.url') .
+                            '">' .
+                            __('fortify-ui::auth.form.terms_of_service_link_text') .
+                            '</a>',
+                    ]) !!}
+                </label>
+            </div>
         </div>
 
         {{-- Errors --}}
@@ -107,11 +121,11 @@
 
                 @include('fortify-ui::starter.components.svg-icons.arrow-right')
             </button>
-
-            <a class="btn btn-link" href="{{ route('login') }}">
-                {{ __('fortify-ui::auth.form.link_do_you_have_an_account') }}
-            </a>
         </div>
+
+        <a class="btn btn-link m-top-2" href="{{ route('login') }}">
+            {{ __('fortify-ui::auth.form.link_do_you_have_an_account') }}
+        </a>
     </form>
 @endsection
 

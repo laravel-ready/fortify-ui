@@ -59,13 +59,20 @@
             </button>
         </div>
 
-        <!-- Check Input Container -->
-        <div class="check-input-container">
-            <input id="remember" name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
+        <!-- Remember Me / Password Forgot -->
+        <div class="remember-forgot-row">
+            <!-- Check Input Container -->
+            <div class="check-input-container">
+                <input id="remember" name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
 
-            <label for="remember">
-                {{ __('fortify-ui::auth.form.remember_me') }}
-            </label>
+                <label for="remember">
+                    {{ __('fortify-ui::auth.form.remember_me') }}
+                </label>
+            </div>
+
+            <a class="btn btn-link" href="{{ route('password.request') }}">
+                {{ __('fortify-ui::auth.form.link_forgot_your_password') }}
+            </a>
         </div>
 
         {{-- Errors --}}
@@ -94,10 +101,6 @@
 
                 @include('fortify-ui::starter.components.svg-icons.login-gate')
             </button>
-
-            <a class="btn btn-link" href="{{ route('password.request') }}">
-                {{ __('fortify-ui::auth.form.link_forgot_your_password') }}
-            </a>
         </div>
     </form>
 @endsection

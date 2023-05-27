@@ -9,6 +9,8 @@ return [
     'confirm_password' => 'Confirm Password',
     'confirm_password_button' => 'Confirm',
     'email_verification' => 'Email Verification',
+    'splitter_or_login_with' => 'Or Login With Email / Username',
+    'splitter_or_register_with' => 'Or Register With Email / Username',
     'form' => [
         'remember_me' => 'Remember Me',
         'placeholder_email_address' => 'Email Address',
@@ -16,10 +18,10 @@ return [
         'placeholder_password_confirmation' => 'Password Confirmation',
         'link_forgot_your_password' => 'Forgot Your Password?',
         'link_do_you_have_an_account' => 'Do you have an account?',
-        'splitter_or_login_with' => 'Or Login With Email / Username',
-        'splitter_or_register_with' => 'Or Register With Email / Username',
         'placeholder_name' => 'Name / Surname',
         'placeholder_username' => 'Username',
+        'terms_of_service' => 'By registering, you agree to the :link.',
+        'terms_of_service_link_text' => 'Terms of Service',
     ],
     'verification' => [
         'notice' => [

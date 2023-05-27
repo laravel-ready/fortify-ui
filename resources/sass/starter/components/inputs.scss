@@ -57,36 +57,3 @@ span[role="alert"] {
     @apply ml-2 text-sm font-medium text-gray-900 dark:text-gray-300;
   }
 }
-
-.submit-button-container {
-  @apply flex flex-row relative pt-4;
-
-  button {
-    @apply flex flex-row justify-center items-center space-x-1 bg-blue-500 text-base text-white rounded-[3px] px-4 py-2
-            hover:bg-blue-600 transition-all duration-300;
-
-    &:hover {
-      svg {
-        @apply fill-white;
-
-        height: 18px;
-      }
-    }
-
-    &.full-width {
-      @apply w-full;
-    }
-
-    svg {
-      @apply fill-gray-100 transition-all duration-200;
-
-      height: 18px;
-    }
-  }
-
-  .btn-link {
-    @apply text-sm mt-[7px] hover:text-blue-500 transition-colors duration-200
-            float-right dark:text-gray-400 dark:hover:text-gray-300
-            cursor-pointer text-right w-full;
-  }
-}
